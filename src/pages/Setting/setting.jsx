@@ -7,7 +7,7 @@ const defaultSettings = {
   phone: "",
   website: "",
   address: "",
-  whatsapp: "923174639554",
+  whatsapp: "***********",
   adminPass: "",
 
   logo: "",
@@ -860,80 +860,7 @@ useEffect(() => {
       return;
     }
 
-    /*
-     * =========================
-     * BACKEND TODO
-     * =========================
-     *
-     * When PHP/MySQL backend is ready, DO NOT update
-     * settings.adminPass on the frontend.
-     *
-     * The frontend should send the password-change request
-     * to the authenticated backend.
-     *
-     * Suggested API:
-     *
-     * PUT /api/settings/security/password
-     *
-     * Request body:
-     *
-     * {
-     *   "currentPassword": "...",
-     *   "newPassword": "..."
-     * }
-     *
-     * Backend responsibilities:
-     *
-     * 1. Verify that the logged-in admin is authenticated.
-     *
-     * 2. Get the admin's HASHED password from the database.
-     *
-     * 3. Verify currentPassword against the stored hash
-     *    using bcrypt or Argon2.
-     *
-     * 4. Hash newPassword using bcrypt or Argon2.
-     *
-     * 5. Update the hashed password in the database.
-     *
-     * 6. NEVER store the plain-text password.
-     *
-     * 7. NEVER send the stored password/hash back to React.
-     *
-     * 8. Return a success/error response to the frontend.
-     *
-     * Suggested database field:
-     *
-     * admin_users.password_hash
-     *
-     * Example backend response:
-     *
-     * Success:
-     * {
-     *   "success": true,
-     *   "message": "Password changed successfully"
-     * }
-     *
-     * Error:
-     * {
-     *   "success": false,
-     *   "message": "Current password is incorrect"
-     * }
-     *
-     * IMPORTANT:
-     * Authentication/session handling should also be implemented
-     * on the backend so that only an authenticated admin can
-     * change the password.
-     */
 
-    /*
-     * FRONTEND DEVELOPMENT MODE:
-     *
-     * Temporarily update the local React state so the feature
-     * can be tested before the backend exists.
-     *
-     * REMOVE this adminPass update when backend authentication
-     * is connected.
-     */
 
     setSettings((prev) => ({
       ...prev,
@@ -1416,7 +1343,7 @@ useEffect(() => {
                             name="whatsapp"
                             value={settings.whatsapp}
                             onChange={handleChange}
-                            placeholder="923..."
+                            placeholder="***********"
                           />
                         </div>
 
@@ -1999,7 +1926,7 @@ useEffect(() => {
                               }));
                             }
                           }}
-                          placeholder="923174639554"
+                          placeholder="***********"
                         />
 
                         {socialErrors.whatsappBusiness && (
