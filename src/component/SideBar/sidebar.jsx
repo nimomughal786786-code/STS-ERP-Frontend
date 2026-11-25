@@ -178,11 +178,11 @@ function Sidebar() {
       <div className="sbottom">
         <div className="fb">
           <div className="savatar" id="SAV">
-            RA
+            DU
           </div>
 
           <div className="ui">
-            <strong id="SN">Rameez Ahmed</strong>
+            <strong id="SN">Demo User</strong>
             <span id="SR">Super Admin</span>
           </div>
         </div>
